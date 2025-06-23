@@ -36,8 +36,8 @@ const DashboardPage = () => {
     <PageLayout>
       <div className="space-y-6">
         {/* Header */}
-        nbsp<div className="flex items-center justify-between">
-          <div>nbsp
+        <div className="flex items-center justify-between">
+          <div>
 <div>
   <div className="flex flex-col items-center space-y-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl bg-gradient-to-b from-gray-900 via-blue-900 to-black p-6 ">
     <div className="bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 flex items-center text-black">
@@ -62,10 +62,7 @@ const DashboardPage = () => {
 </div>
 
 
-
-
-             nbsp
-            <h1 className="text-2xl font-bold tracking-tight text-black">Hospital Dashboard</h1>
+            <h1 className="pt-5 text-2xl font-bold tracking-tight text-black">Hospital Dashboard</h1>
             <p className="text-muted-foreground">
               Real-time overview of hospital operations
             </p>
