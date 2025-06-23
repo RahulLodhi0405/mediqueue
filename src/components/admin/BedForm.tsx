@@ -203,4 +203,5 @@ const BedForm: React.FC<BedFormProps> = ({ bed, onSubmit, onCancel }) => {
   );
 };
 
+
 export default BedForm;
