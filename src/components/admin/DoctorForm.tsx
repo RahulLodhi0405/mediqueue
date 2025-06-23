@@ -86,7 +86,7 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSubmit, onCancel }) =
     <form onSubmit={onFormSubmit} className="space-y-4">
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="firstName">Prénom *</Label>
+          <Label htmlFor="firstName">First name</Label>
           <Input
             id="firstName"
             name="firstName"
@@ -100,7 +100,7 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSubmit, onCancel }) =
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="lastName">Nom *</Label>
+          <Label htmlFor="lastName">Last name</Label>
           <Input
             id="lastName"
             name="lastName"
@@ -115,10 +115,10 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSubmit, onCancel }) =
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="speciality">Spécialité *</Label>
+        <Label htmlFor="speciality">Speciality *</Label>
         <Select value={values.speciality} onValueChange={(value) => setFieldValue('speciality', value)}>
           <SelectTrigger className={errors.speciality ? 'border-red-500' : ''}>
-            <SelectValue placeholder="Sélectionner une spécialité" />
+            <SelectValue placeholder="Select speciality" />
           </SelectTrigger>
           <SelectContent>
             {specialities.map((speciality) => (
@@ -134,10 +134,10 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSubmit, onCancel }) =
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="department">Département *</Label>
+        <Label htmlFor="department">Department</Label>
         <Select value={values.department} onValueChange={(value) => setFieldValue('department', value)}>
           <SelectTrigger className={errors.department ? 'border-red-500' : ''}>
-            <SelectValue placeholder="Sélectionner un département" />
+            <SelectValue placeholder="Select department" />
           </SelectTrigger>
           <SelectContent>
             {departments.map((department) => (
@@ -154,7 +154,7 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSubmit, onCancel }) =
 
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="email">Email *</Label>
+          <Label htmlFor="email">Email</Label>
           <Input
             id="email"
             name="email"
@@ -169,7 +169,7 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSubmit, onCancel }) =
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="phone">Téléphone *</Label>
+          <Label htmlFor="phone">Mobile</Label>
           <Input
             id="phone"
             name="phone"
@@ -184,24 +184,24 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSubmit, onCancel }) =
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="status">Status *</Label>
+        <Label htmlFor="status">Status</Label>
         <Select value={values.status} onValueChange={(value) => setFieldValue('status', value as 'active' | 'inactive')}>
           <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="active">Actif</SelectItem>
-            <SelectItem value="inactive">Inactif</SelectItem>
+            <SelectItem value="active">Active</SelectItem>
+            <SelectItem value="inactive">Inactive</SelectItem>
           </SelectContent>
         </Select>
       </div>
 
       <div className="flex justify-end space-x-2 pt-4">
         <Button type="button" variant="outline" onClick={onCancel}>
-          Annuler
+          Submit
         </Button>
         <Button type="submit">
-          {doctor ? 'Modifier' : 'Ajouter'}
+          {doctor ? 'Modifier' : 'Modify'}
         </Button>
       </div>
     </form>
